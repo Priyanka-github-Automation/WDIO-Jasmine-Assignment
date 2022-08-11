@@ -35,6 +35,7 @@ describe('Validate securian retirement calculator feature ', () => {
         await RetirementPage.additionalIncome.waitForDisplayed()
         await expect(RetirementPage.additionalIncome).toBeDisplayed()
         //verifying if user is able to update a field
+        await RetirementPage.retirementDuration.waitForDisplayed()
         await RetirementPage.retirementDuration.addValue(data.retirementDuration)
         let value = await RetirementPage.retirementDuration.getValue()
         await expect (value).toEqual(data.retirementDuration)
@@ -85,6 +86,7 @@ describe('Validate securian retirement calculator feature ', () => {
          await RetirementPage.preRetirementRoi.setValue(data.preRetirementRoi)
          await RetirementPage.postRetirementRoi.setValue(data.postRetirementRoi)
          await RetirementPage.saveChangesBtn.click()
+         await RetirementPage.calculateResultsBtn.waitForClickable()
          await RetirementPage.calculateResultsBtn.click()
          
          //verifying if results are getting displayed after user submits the form
