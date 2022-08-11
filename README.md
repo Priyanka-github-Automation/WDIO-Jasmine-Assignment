@@ -12,5 +12,5 @@ On retirement savings calculator page, https://www.securian.com/insights-tools/r
 Clone the git repo — git clone https://github.com/Priyanka-github-Automation/WDIO-Jasmine-Assignment.git,  
 
 Commands to run:
-npm install
-npm run test:local
+- npm install
+- npm run test:local
